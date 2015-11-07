@@ -1,9 +1,8 @@
 import java.util.Set;
-import java.util.HashSet;
 public class User {
 	
-	private Set<Rating> givenRatings = new HashSet<Rating>();
-	private Set<Rating> receivedGuestRatings = new HashSet<Rating>();
+	private Set<Rating> givenRatings;
+	private Set<Rating> receivedGuestRatings;
 	private Integer userId;
 
 	public Integer getUserId() {
