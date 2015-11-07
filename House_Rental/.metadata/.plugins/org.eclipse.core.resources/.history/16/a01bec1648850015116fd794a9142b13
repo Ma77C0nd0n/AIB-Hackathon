@@ -13,13 +13,4 @@ public class User {
 		this.userId = uid;
 	}
 	
-	public Rating getRatingFor(int id) {
-		for(Rating r:givenRatings) {
-			if (r.getRatedID() == id) {
-				return r;
-			}
-		}
-		return null;
-	}
-	
 }
