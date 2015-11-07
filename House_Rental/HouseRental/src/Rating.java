@@ -3,12 +3,14 @@ public class Rating {
 
 	private double rating;
 	private String comment;
+	private int ratedID;
 
-	public Rating(double r,String s) {
-		changeRating(r,s);
+	public Rating(int ID,double r,String s) {
+		changeRating(ID,r,s);
 	}
 	
-	public void changeRating(double r,String s) {
+	public void changeRating(int ID,double r,String s) {
+		ratedID = ID;
 		rating = r;
 		if (rating < 1.0) {
 			rating = 1.0;
@@ -17,6 +19,9 @@ public class Rating {
 			rating = 5.0;
 		}
 		comment = s;
+	}
+	public int getRatedID() {
+		return ratedID;
 	}
 	
 	public double getRating() {

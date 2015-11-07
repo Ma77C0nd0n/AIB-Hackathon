@@ -1,4 +1,4 @@
-
+import java.util.Set;
 public class Guest extends User {
 
 	private boolean confirmedBooking;
@@ -27,5 +27,14 @@ public class Guest extends User {
 
 	public int checkHost() {
 		return hostID;
+	}
+	
+	public Set<Rating> getRatings() {
+		return super.givenRatings;
+	}
+	
+	public void Rate(int ID,double rating,String comment) {
+		Rating r = new Rating(ID,rating,comment);
+		super.givenRatings.add(r);
 	}
 }

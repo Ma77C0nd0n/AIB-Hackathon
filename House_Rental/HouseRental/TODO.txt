@@ -5,8 +5,8 @@ TODO:
 	Host	Guest
 	
 User:
-Name, Email, Password, College, Set<Rating> givenRatings, Set<Rating receivedGuestRatings
+Name, Email, Password, College, Set<Rating> givenRatings, Set<Rating> receivedGuestRatings
 Host:
 Address, Price, Available?, recievedHostRatings
 Guest:
-confirmedBooking?
+confirmedBooking?, hostID
