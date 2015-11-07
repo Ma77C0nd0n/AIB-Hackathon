@@ -39,6 +39,10 @@ public class Rating {
 	}
 	
 	public String toString() {
+		return (raterID+"\t"+ratedID+"\t"+rating+"\t"+comment);
+	}
+	
+	public String toPrettyString() {
 		String s = (raterID + " Has rated " + ratedID + " with " + rating + "/5.");
 		s+= ("\nComment: " + comment);
 		return s;
