@@ -1,0 +1,15 @@
+
+public class Rating {
+
+	public Rating(double r,String s) {
+		double rating = r;
+		if (rating < 1.0) {
+			rating = 1.0;
+		}
+		if (rating > 5.0) {
+			rating = 5.0;
+		}
+		String comment = s;
+	}
+	
+}

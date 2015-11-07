@@ -1,0 +1,22 @@
+
+public class Guest extends User {
+	
+	private boolean confirmedBooking;
+	
+	public Guest(int uid) {
+		super(uid);
+		confirmedBooking = false;
+	}
+	
+	public void confirmBooking() {
+		confirmedBooking = true;
+	}
+	
+	public void endBooking() {
+		confirmedBooking = false;
+	}
+	
+	public boolean checkBooking() {
+		return confirmedBooking;
+	}
+}

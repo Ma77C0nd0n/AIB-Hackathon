@@ -1,0 +1,8 @@
+101	102	3	"Smells ok"
+101	103	5	"Lovely fella"
+102	101	1	"Didn't let us in"
+103	104	3	"Poor location"
+103	105	2	"Small house"
+104	101	4	"Nice house"
+104	103	2	"Very noisy"
+105	101	5	"Great time"

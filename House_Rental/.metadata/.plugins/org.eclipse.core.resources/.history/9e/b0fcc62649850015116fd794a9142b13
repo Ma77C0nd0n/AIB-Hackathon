@@ -1,0 +1,33 @@
+import java.util.Set;
+public class User {
+	
+	private Set<Rating> givenRatings;
+	private Set<Rating> receivedGuestRatings;
+	private Integer userId;
+
+	public Integer getUserId() {
+		return userId;
+	}	
+	
+	public User(final Integer uid){
+		this.userId = uid;
+	}
+	
+	public Rating getRatingFor(int id) {
+		for(Rating r:givenRatings) {
+			if (r.getRatedID() == id) {
+				return r;
+			}
+		}
+		return null;
+	}
+	
+	public void Rate(int ID, double rating, String comment) {
+		Rating r = new Rating(ID,rating,comment);
+		givenRatings.add(r);
+	}
+	
+	public Set<Rating> getRatingsList() {
+		return givenRatings;
+	}
+}

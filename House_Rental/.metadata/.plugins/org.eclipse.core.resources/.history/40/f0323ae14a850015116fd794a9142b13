@@ -1,0 +1,8 @@
+import java.util.Set;
+import java.util.HashSet;
+
+public class Guest_Reader {
+	public Set<Guest> guestList = new HashSet<Guest>();
+	
+	File f = new File();
+}
