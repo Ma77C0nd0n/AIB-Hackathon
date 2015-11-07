@@ -30,11 +30,7 @@ public class Guest extends User {
 	}
 	
 	public Set<Rating> getRatings() {
-		return super.givenRatings;
+		return super.getRatingsList();
 	}
 	
-	public void Rate(int ID,double rating,String comment) {
-		Rating r = new Rating(ID,rating,comment);
-		super.givenRatings.add(r);
-	}
 }

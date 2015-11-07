@@ -1,9 +1,9 @@
 import java.util.Set;
 public class User {
 	
-	Set<Rating> givenRatings;
-	Set<Rating> receivedGuestRatings;
-	public Integer userId;
+	private Set<Rating> givenRatings;
+	private Set<Rating> receivedGuestRatings;
+	private Integer userId;
 
 	public Integer getUserId() {
 		return userId;
@@ -22,4 +22,12 @@ public class User {
 		return null;
 	}
 	
+	public void Rate(int ID, double rating, String comment) {
+		Rating r = new Rating(ID,rating,comment);
+		givenRatings.add(r);
+	}
+	
+	public Set<Rating> getRatingsList() {
+		return givenRatings;
+	}
 }
