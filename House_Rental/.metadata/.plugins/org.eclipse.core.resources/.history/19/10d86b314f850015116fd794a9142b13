@@ -3,7 +3,7 @@ public class main {
 	
 	public static void main(String[] args){
 		
-		Guest test_user = new Guest(13523107);
+		User test_user = new User(13523107);
 	
 		test_user.Rate(13523107,4.5,"Very gud");
 		

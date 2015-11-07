@@ -1,9 +1,5 @@
-import java.util.Set;
-import java.util.HashSet;
-
+import java.io.*;
 public class Guest_Writer {
-	public Set<Guest> guestList = new HashSet<Guest>();
+	File f = new File("u.data");
 	
-	// TODO
-	// Remember how to deal with files lol
 }
