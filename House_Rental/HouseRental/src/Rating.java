@@ -4,12 +4,14 @@ public class Rating {
 	private double rating;
 	private String comment;
 	private int ratedID;
+	private int raterID;
 
-	public Rating(int ID,double r,String s) {
-		changeRating(ID,r,s);
+	public Rating(int raterID,int ratedID,double r,String s) {
+		changeRating(raterID,ratedID,r,s);
 	}
 	
-	public void changeRating(int ID,double r,String s) {
+	public void changeRating(int rID,int ID,double r,String s) {
+		raterID = rID;
 		ratedID = ID;
 		rating = r;
 		if (rating < 1.0) {
@@ -20,6 +22,10 @@ public class Rating {
 		}
 		comment = s;
 	}
+	public int getRaterID() {
+		return raterID;
+	}
+	
 	public int getRatedID() {
 		return ratedID;
 	}
@@ -30,6 +36,12 @@ public class Rating {
 	
 	public String getComment() {
 		return comment;
+	}
+	
+	public String toString() {
+		String s = (raterID + " Has rated " + ratedID + " with " + rating + "/5.");
+		s+= ("\nComment: " + comment);
+		return s;
 	}
 	
 }

@@ -1,5 +1,5 @@
 import java.io.File;
-
+import java.util.Set;
 
 public class main {
 	
@@ -11,10 +11,15 @@ public class main {
 		
 		Guest_Writer gw = new Guest_Writer(test_user.getRatingFor(13523107));
 		
-		System.out.println(test_user.getUserId() + " " + test_user.getRatingFor(13523107).getRating() + " " + test_user.getRatingFor(13523107).getComment());
+		System.out.println(test_user.getUserID() + " " + test_user.getRatingFor(13523107).getRating() + " " + test_user.getRatingFor(13523107).getComment());
 		
 		DatasetReader data = new DatasetReader("src/u.data");
 		data.loadAllUsers();
+		
+		Set<Rating> ratingsSet = data.getAllRatings();
+		for(Rating r:ratingsSet) {
+			System.out.println(r.toString());
+		}
 	}
 	
 }

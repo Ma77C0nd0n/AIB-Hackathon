@@ -6,7 +6,7 @@ public class User {
 	private Set<Rating> receivedGuestRatings = new HashSet<Rating>();
 	private Integer userId;
 
-	public Integer getUserId() {
+	public Integer getUserID() {
 		return userId;
 	}	
 	
@@ -24,7 +24,7 @@ public class User {
 	}
 	
 	public void Rate(int ID, double rating, String comment) {
-		Rating r = new Rating(ID,rating,comment);
+		Rating r = new Rating(getUserID(),ID,rating,comment);
 		givenRatings.add(r);
 	}
 	
