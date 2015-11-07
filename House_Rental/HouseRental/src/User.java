@@ -4,7 +4,7 @@ public class User {
 		return userId;
 	}
 	
-	private Integer userId;
+	public Integer userId;
 	
 	public User(final Integer uid){
 		this.userId = uid;
