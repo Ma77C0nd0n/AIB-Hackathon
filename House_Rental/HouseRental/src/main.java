@@ -8,13 +8,13 @@ public class main {
 	
 	public static void main(String[] args) throws Exception{
 		
-		Guest test_user = new Guest(13523107);
+		Guest test_user = new Guest(100);
 	
-		test_user.Rate(13523107,4.5,"Very gud");
+		test_user.Rate(104,4.5,"Very gud");
 		
-		Guest_Writer gw = new Guest_Writer(test_user.getRatingFor(13523107));
+		Guest_Writer gw = new Guest_Writer(test_user.getRatingFor(104));
 		
-		System.out.println(test_user.getUserID() + " " + test_user.getRatingFor(13523107).getRating() + " " + test_user.getRatingFor(13523107).getComment());
+		System.out.println(test_user.getRatingFor(104).toString());
 		
 		DatasetReader data = new DatasetReader("src/u.data");
 		data.loadAllUsers();
@@ -24,11 +24,11 @@ public class main {
 			System.out.println(r.toString());
 		}
 		
-		JFrame mainFrame = new JFrame("Home A-Loan");
-		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		mainFrame.setSize(800, 600);
-		
-		mainFrame.setVisible(true);
+//		JFrame mainFrame = new JFrame("Home A-Loan");
+//		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		mainFrame.setSize(800, 600);
+//		
+//		mainFrame.setVisible(true);
 
 	}
 	

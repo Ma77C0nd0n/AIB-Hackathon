@@ -9,7 +9,7 @@ public class Rating {
 	public Rating(int raterID,int ratedID,double r,String s) {
 		changeRating(raterID,ratedID,r,s);
 	}
-	
+
 	public void changeRating(int rID,int ID,double r,String s) {
 		raterID = rID;
 		ratedID = ID;
@@ -25,27 +25,31 @@ public class Rating {
 	public int getRaterID() {
 		return raterID;
 	}
-	
+
 	public int getRatedID() {
 		return ratedID;
 	}
-	
+
 	public double getRating() {
 		return rating;
 	}
-	
+
 	public String getComment() {
 		return comment;
 	}
-	
+
 	public String toString() {
-		return (raterID+"\t"+ratedID+"\t"+rating+"\t"+comment);
+		if(comment.toCharArray()[0] == '\"'){
+			return (raterID+"\t"+ratedID+"\t"+rating+"\t"+comment);
+		}else{
+			return (raterID+"\t"+ratedID+"\t"+rating+"\t\""+comment+"\"");
+		}
 	}
-	
+
 	public String toPrettyString() {
 		String s = (raterID + " Has rated " + ratedID + " with " + rating + "/5.");
-		s+= ("\nComment: " + comment);
+		s+= ("\nComment: \"" + comment +"\"");
 		return s;
 	}
-	
+
 }
