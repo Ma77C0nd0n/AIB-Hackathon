@@ -1,5 +1,8 @@
+import java.awt.Color;
 import java.io.File;
 import java.util.Set;
+
+import javax.swing.*;
 
 public class main {
 	
@@ -20,6 +23,13 @@ public class main {
 		for(Rating r:ratingsSet) {
 			System.out.println(r.toString());
 		}
+		
+		JFrame mainFrame = new JFrame("Home A-Loan");
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainFrame.setSize(800, 600);
+		
+		mainFrame.setVisible(true);
+
 	}
 	
 }
