@@ -7,6 +7,8 @@ public class main {
 	
 		test_user.Rate(13523107,4.5,"Very gud");
 		
+		Guest_Writer gw = new Guest_Writer(test_user.getRatingFor(13523107));
+		
 		System.out.println(test_user.getUserId() + " " + test_user.getRatingFor(13523107).getRating() + " " + test_user.getRatingFor(13523107).getComment());
 	}
 	
